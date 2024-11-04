@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aventura Ordem</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <div class="passo ativo" id="passo-0">
+            <img src="img/cenario-passo0.jpg" alt="Imagem da Ordem">
+            <p>Você, um experiente agente da ordem, é convocado para uma nova missão. Nela você deverá explorar sozinho
+                uma pequena caverna ao sul do país, segundo investigações do CRIS esse local tem um baixo nivel de
+                paranormal. Você deverá acabar com qualquer coisa que tiver lá. Você está levando sua espada, que foi
+                recentemente amaldiçoada com conhecimento, e seu fuzil, que tem balas amaldiçadas com sangue. Qual será
+                seu primeiro passo?</p>
+            <button class="btn-proximo" data-proximo="1">Ir para a missão</button>
+            <button class="btn-proximo" data-proximo="2">Falar com o samuel</button>
+        </div>
+
+        <div class="passo" id="passo-1">
+            <p>Você se dirige até a caverna. Nas proximidades dela você encontra um homem, ele diz que seu filho entrou
+                nessa caverna e sumiu, agora ele quer entrar lá e resgatar ele.</p>
+            <button class="btn-proximo" data-proximo="3">Levar ele junto com você</button>
+            <button class="btn-proximo" data-proximo="32">Falar que vai resgatar a criança e dizer para ele esperar</button>
+        </div>
+
+        <div class="passo" id="passo-2">
+            <p>Ele diz que essa missão não deverá ser dificil pra você, tudo indica que você terá que enfrentar poucos desafios. Ele te da algumas balas extras caso precise.</p>
+            <button class="btn-proximo" data-proximo="1">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-3">
+            <p>Ele diz que seu nome é Carlos e que está levando uma pistola e vocês entram na caverna. Porém você tem que decidir entre direita e esquerda.</p>
+            <button class="btn-proximo" data-proximo="4">Direita</button>
+            <button class="btn-proximo" data-proximo="11">Esquerda</button>
+        </div>
+
+        <div class="passo luta" id="passo-4">
+            <img src="img/Miniatura - Zumbi de Sangue 3.png" alt="">
+            <p>Vocês andam um pouco e encontram uma orda de zumbis de sangue. Carlos fica assustados demais e não consegue lutar. Como você quer lutar?</p>
+            <button class="btn-proximo" data-proximo="5" dt-vitoria="8">Fuzil</button>
+            <button class="btn-proximo" data-proximo="7" dt-vitoria="8">Espada</button>
+        </div>
+
+        <div class="passo" id="passo-5">
+            <p>Você atira nos zumbis e os mata, porém eles acabam fatalmente atingindo Carlos.</p>
+            <button class="btn-proximo" data-proximo="10">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-6">
+            <p>Você atira nos zumbis e os mata facilmente. Carlos fica mais calmo.</p>
+            <button class="btn-proximo" data-proximo="9">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-7">
+            <p>Você corta os zumbis e os mata, porém eles acabam atingindo fatalmente Carlos.</p>
+            <button class="btn-proximo" data-proximo="10">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-8">
+            <p>Você faz um corte nos zumbis e os mata facilmente. Carlos fica mais calmo.</p>
+            <button class="btn-proximo" data-proximo="9">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-9">
+            <p>Vocês encontram o filho de Carlos e saiem daquele lugar. Missão concluida com êxito total.</p>
+        </div>
+
+        <div class="passo" id="passo-10">
+            <p>Você encontra o filho de Carlos, porém não consegui salvar o pai dele. Missão concluida com êxito parcial.</p>
+        </div>
+
+        <div class="passo luta" id="passo-11">
+            <img src="img/Miniatura - Zumbi de Sangue 3.png" alt="">
+            <p>Vocês andam um pouco e encontram uma orda de zumbis de sangue. Carlos fica assustados demais e não consegue lutar. Como você quer lutar?</p>
+            <button class="btn-proximo" data-proximo="12" dt-vitoria="6">Fuzil</button>
+            <button class="btn-proximo" data-proximo="14" dt-vitoria="6">Espada</button>
+        </div>
+
+        <div class="passo" id="passo-12">
+            <p>Você atira no zumbi e o mata, porém ele acaba atingindo Carlos. Ele continua agitado.</p>
+            <button class="btn-proximo" data-proximo="16">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-13">
+            <p>Você atira no zumbi e o mata facilmente. Carlos fica mais calmo.</p>
+            <button class="btn-proximo" data-proximo="24">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-14">
+            <p>Você corta o zumbi e o mata, porém ele acaba atingindo Carlos. Ele continua agitado.</p>
+            <button class="btn-proximo" data-proximo="16">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-15">
+            <p>Você atira no zumbi e o mata, porém ele acaba atingindo Carlos. Ele continua agitado.</p>
+            <button class="btn-proximo" data-proximo="24">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-16">
+            <p>Vocês chegam no final do caminho. Ele tem varios simbolos de rituais nas paredes. Vocês decidem voltar e ir pelo outro caminho.</p>
+            <button class="btn-proximo" data-proximo="16">Continuar</button>
+        </div>
+
+        <div class="passo luta" id="passo-17">
+                <img src="img/-ZumbideSangue.png" alt="">
+            <p>Vocês andam um pouco e encontram uma orda de zumbis de sangue. Carlos fica assustados demais e não consegue lutar. Como você quer lutar?</p>
+            <button class="btn-proximo" data-proximo="18" dt-vitoria="8">Fuzil</button>
+            <button class="btn-proximo" data-proximo="20" dt-vitoria="8">Espada</button>
+        </div>
+
+        <div class="passo" id="passo-18">
+            <p>Você atira nos zumbis e os mata, porém eles acabam fatalmente atingindo Carlos.</p>
+            <button class="btn-proximo" data-proximo="23">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-19">
+            <p>Você atira nos zumbis e os mata facilmente. Carlos fica mais calmo.</p>
+            <button class="btn-proximo" data-proximo="22">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-20">
+            <p>Você corta os zumbis e os mata, porém eles acabam atingindo fatalmente Carlos.</p>
+            <button class="btn-proximo" data-proximo="23">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-21">
+            <p>Você faz um corte nos zumbis e os mata facilmente. Carlos fica mais calmo.</p>
+            <button class="btn-proximo" data-proximo="22">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-22">
+            <p>Vocês encontram o filho de Carlos e saiem daquele lugar. Missão concluida com êxito total.</p>
+        </div>
+
+        <div class="passo" id="passo-23">
+            <p>Você encontra o filho de Carlos, porém não consegui salvar o pai dele. Missão concluida com êxito parcial.</p>
+        </div>
+
+        <div class="passo" id="passo-24">
+            <p>Vocês chegam no final do caminho. Ele tem varios simbolos de rituais nas paredes. Vocês decidem voltar e ir pelo outro caminho.</p>
+            <button class="btn-proximo" data-proximo="25">Continuar</button>
+        </div>
+
+        <div class="passo luta" id="passo-25">
+            <img src="img/Miniatura - Zumbi de Sangue 3.png" alt="">
+            <p>Vocês andam um pouco e encontram uma orda de zumbis de sangue. Carlos está mais calmo e consegue lutar. Como você quer lutar?</p>
+            <button class="btn-proximo" data-proximo="26" dt-vitoria="4">Fuzil</button>
+            <button class="btn-proximo" data-proximo="28" dt-vitoria="4">Espada</button>
+        </div>
+
+        <div class="passo" id="passo-26">
+            <p>Você atira nos zumbis e os mata, porém eles acabam fatalmente atingindo Carlos.</p>
+            <button class="btn-proximo" data-proximo="31">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-27">
+            <p>Vocês atiram nos zumbis e os matam facilmente.</p>
+            <button class="btn-proximo" data-proximo="30">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-28">
+            <p>Você corta os zumbis e os mata, porém eles acabam atingindo fatalmente Carlos.</p>
+            <button class="btn-proximo" data-proximo="31">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-29">
+            <p>Você faz um corte nos zumbis e os mata facilmente.</p>
+            <button class="btn-proximo" data-proximo="30">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-30">
+            <p>Vocês encontram o filho de Carlos e saiem daquele lugar. Missão concluida com êxito total.</p>
+        </div>
+
+        <div class="passo" id="passo-31">
+            <p>Você encontra o filho de Carlos, porém não consegui salvar o pai dele. Missão concluida com êxito parcial.</p>
+        </div>
+
+        <div class="passo" id="passo-32">
+            <p>Você entra na caverna. Porém você tem que decidir entre direita e esquerda.</p>
+            <button class="btn-proximo" data-proximo="33">Direita</button>
+            <button class="btn-proximo" data-proximo="54">Esquerda</button>
+        </div>
+
+        <div class="passo luta" id="passo-33">
+            <img src="img/Miniatura - Zumbi de Sangue 3.png" alt="">
+            <p>Você anda um pouco e encontra uma orda de zumbis de sangue. Como você quer lutar?</p>
+            <button class="btn-proximo" data-proximo="34" dt-vitoria="8">Fuzil</button>
+            <button class="btn-proximo" data-proximo="36" dt-vitoria="8">Espada</button>
+        </div>
+
+        <div class="passo" id="passo-34">
+            <p>Você atira nos zumbis e os mata, porém eles um deles acaba te acertando.</p>
+            <button class="btn-proximo" data-proximo="38">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-35">
+            <p>Você atira nos zumbis e os mata facilmente.</p>
+            <button class="btn-proximo" data-proximo="38">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-36">
+            <p>Você corta os zumbis e os mata, porém um deles te atinge.</p>
+            <button class="btn-proximo" data-proximo="38">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-37">
+            <p>Você faz um corte nos zumbis e os mata facilmente.</p>
+            <button class="btn-proximo" data-proximo="38">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-38">
+            <p>Você encontra o filho do homem e sai daquele lugar. Missão concluida.</p>
+            <button class="btn-proximo" data-proximo="39">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-39">
+            <p>Porém algo te chama a investigar o outro lado da caverna. Você vai?</p>
+            <button class="btn-proximo" data-proximo="40">Não ir</button>
+            <button class="btn-proximo" data-proximo="41">Ir</button>
+        </div>
+
+        <div class="passo" id="passo-40">
+            <p>Missão concluida com êxito total.</p>
+        </div>
+
+        <div class="passo luta" id="passo-41">
+            <img src="img/-ZumbideSangue.png" alt="">
+            <p>Você encontra um zumbi de sangue. Como você quer lutar?</p>
+            <button class="btn-proximo" data-proximo="42" dt-vitoria="3">Fuzil</button>
+            <button class="btn-proximo" data-proximo="44" dt-vitoria="3">Espada</button>
+        </div>
+
+        <div class="passo" id="passo-42">
+            <p>Você atira no zumbi e os mata, porém ele acaba te acertando.</p>
+            <button class="btn-proximo" data-proximo="46">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-43">
+            <p>Você atira no zumbi e o mata facilmente.</p>
+            <button class="btn-proximo" data-proximo="46">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-44">
+            <p>Você faz um corte no zumbi e o mata facilmente.</p>
+            <button class="btn-proximo" data-proximo="46">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-45">
+            <p>Você atira nos zumbis e os mata, porém eles acabam fatalmente atingindo Carlos.</p>
+            <button class="btn-proximo" data-proximo="46">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-46">
+            <p>Você encontra uma passagem mais apertada que está cheia de símbolos nas paredes. Continuando por ela você vê um tablet emitindo uma luz verde, chegando mais perto você percebe que não existe nenhuma tomada lá, derepente grandes braços começam a sair daquele tablet e em questão de segundos um ser enorme e assustador surge.</p>
+            <button class="btn-proximo" data-proximo="47">Continuar</button>
+        </div>
+
+        <div class="passo luta" id="passo-47">
+            <img src="img/Deus do Zap.png" alt="">
+            <p>Você encontra esse ser bizarro e assustador. Como você quer lutar?</p>
+            <button class="btn-proximo" data-proximo="48" dt-vitoria="12">Fuzil</button>
+            <button class="btn-proximo" data-proximo="50" dt-vitoria="12">Espada</button>
+        </div>
+
+        <div class="passo" id="passo-48">
+            <p>Você atira nesse ser, porém ele parece ser muito resisitente. Ele corre em sua direção e te joga contra parede. Você morreu!</p>
+            <button class="btn-proximo" data-proximo="52">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-49">
+            <p>Você atira nesse ser, ele tenta correr em sua direção e te agarar, porém você consegue desviar e ser apenas arranhado, com mais alguns tiros você derruba essa criatura!</p>
+            <button class="btn-proximo" data-proximo="53">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-50">
+            <p>Você tenta cortar esse ser, porém ele te agarra antes e te joga contra parede, você tenta fugir porém ele te da um soco. Você morreu!</p>
+            <button class="btn-proximo" data-proximo="52">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-51">
+            <p>Você pula nesse ser e consegue fazer um corte em seu braço, sua lâmina faz bastante efeito nele, essa criatura tenta te dar um soco, mas você consegue pular em seu braço e cortar sua cabeça. Você derruba esse ser!</p>
+            <button class="btn-proximo" data-proximo="53">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-52">
+            <p>Falha na missão.</p>
+        </div>
+
+        <div class="passo" id="passo-53">
+            <p>Você eliminou tudo nesta caverna. Missão concluida com êxito total.</p>
+        </div>
+
+        <div class="passo luta" id="passo-54">
+            <img src="img/-ZumbideSangue.png" alt="">
+            <p>Você encontra um zumbi de sangue. Como você quer lutar?</p>
+            <button class="btn-proximo" data-proximo="55" dt-vitoria="3">Fuzil</button>
+            <button class="btn-proximo" data-proximo="57" dt-vitoria="3">Espada</button>
+        </div>
+
+        <div class="passo" id="passo-55">
+            <p>Você atira no zumbi e os mata, porém ele acaba te acertando.</p>
+            <button class="btn-proximo" data-proximo="59">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-56">
+            <p>Você atira no zumbi e o mata facilmente.</p>
+            <button class="btn-proximo" data-proximo="59">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-57">
+            <p>Você corta o zumbi e o mata, porém ele te atinge.</p>
+            <button class="btn-proximo" data-proximo="59">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-58">
+            <p>Você faz um corte no zumbi e o mata facilmente.</p>
+            <button class="btn-proximo" data-proximo="59">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-59">
+            <p>Você encontra uma passagem mais apertada que está cheia de símbolos nas paredes. Continuando por ela você vê um tablet emitindo uma luz verde, chegando mais perto você percebe que não existe nenhuma tomada lá, derepente grandes braços começam a sair daquele tablet e em questão de segundos um ser enorme e assustador surge.</p>
+            <button class="btn-proximo" data-proximo="60">Continuar</button>
+        </div>
+
+        <div class="passo luta" id="passo-60">
+            <img src="img/Deus do Zap.png" alt="">
+            <p>Você encontra esse ser bizarro e assustador. Como você quer lutar?</p>
+            <button class="btn-proximo" data-proximo="61" dt-vitoria="11">Fuzil</button>
+            <button class="btn-proximo" data-proximo="63" dt-vitoria="9">Espada</button>
+        </div>
+
+        <div class="passo" id="passo-61">
+            <p>Você atira nesse ser, porém ele parece ser muito resisitente. Ele corre em sua direção e te joga contra parede. Você morreu!</p>
+            <button class="btn-proximo" data-proximo="65">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-62">
+            <p>Você atira nesse ser, ele tenta correr em sua direção e te agarar, porém você consegue desviar e ser apenas arranhado, com mais alguns tiros você derruba essa criatura!</p>
+            <button class="btn-proximo" data-proximo="66">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-63">
+            <p>Você tenta cortar esse ser, porém ele te agarra antes e te joga contra parede, você tenta fugir porém ele te da um soco. Você morreu!</p>
+            <button class="btn-proximo" data-proximo="65">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-64">
+            <p>Você pula nesse ser e consegue fazer um corte em seu braço, sua lâmina faz bastante efeito nele, essa criatura tenta te dar um soco, mas você consegue pular em seu braço e cortar sua cabeça. Você derruba esse ser!</p>
+            <button class="btn-proximo" data-proximo="66">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-65">
+            <p>Falha na missão.</p>
+        </div>
+
+        <div class="passo" id="passo-66">
+            <p>Você ainda não encontrou o filho do homem.</p>
+            <button class="btn-proximo" data-proximo="68">Voltar e ir pelo outro lado</button>
+            <button class="btn-proximo" data-proximo="67">Desistir da missão e descançar.</button>
+        </div>
+
+        <div class="passo" id="passo-67">
+            <p> Missão concluida com fracasso parcial.</p>
+        </div>
+
+        <div class="passo luta" id="passo-68">
+            <img src="img/Miniatura - Zumbi de Sangue 3.png" alt="">
+            <p>Você anda um pouco e encontra uma orda de zumbis de sangue. Como você quer lutar?</p>
+            <button class="btn-proximo" data-proximo="69" dt-vitoria="9">Fuzil</button>
+            <button class="btn-proximo" data-proximo="71" dt-vitoria="9">Espada</button>
+        </div>
+
+        <div class="passo" id="passo-=69">
+            <p>Você atira nos zumbis e os mata, porém eles um deles acaba te acertando.</p>
+            <button class="btn-proximo" data-proximo="73">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-70">
+            <p>Você atira nos zumbis e os mata facilmente.</p>
+            <button class="btn-proximo" data-proximo="73">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-71">
+            <p>Você corta os zumbis e os mata, porém um deles te atinge.</p>
+            <button class="btn-proximo" data-proximo="73">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-72">
+            <p>Você faz um corte nos zumbis e os mata facilmente.</p>
+            <button class="btn-proximo" data-proximo="73">Continuar</button>
+        </div>
+
+        <div class="passo" id="passo-73">
+            <p>Você encontra o filho do homem e sai daquele lugar. Missão concluida com êxito extremo.</p>
+        </div>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
